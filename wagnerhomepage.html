@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+
+		<title>Wagner Family & Cosmetic Dentistry</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+		<link rel="shortcut icon" type="image/x-icon" href="favicon_package_v0.16/favicon.ico">
+
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="dentiststyle.css">
+
+	</head>
+
+	<body>
+
+		<div class="container-fluid row" id="topbar">
+			
+			<a class="top col-sm-6" href="covidupdate.html" id="al">
+				<div id="alert">COVID-19 Response and Policy</div>
+			</a>
+			
+			<a class="top col-sm-6" href="#numberaddy" id="co">
+				<div id="contact">Contact Us</div>
+			</a>
+			
+		</div>
+
+		<div id=topnaver>
+			<nav class="navbar navbar-expand-sm" id="topnavbar">
+					<button class="btn col-sm-6 homer" id="homebutton" onclick="showTab(0)">
+						<div id="logohome"><img src="photologo.jpg" id="middlehomebut"></div>
+					</button>
+			
+	  			<ul class="navbar-nav" id="navlinks">
+	    			<li class="nav-item horz">
+	      				<a class="nav-link" onClick="checkMe()" href="#goal">About Us</a>
+	    			</li>
+	    			<li class="nav-item horz">
+	      				<a class="nav-link" onclick="showTab(2)">Services</a>
+	    			</li>
+	    			<li class="nav-item horz">
+	      				<a class="nav-link" onClick="checkMe()" href="#financing">Financing</a>
+	    			</li>
+	    			<li class="nav-item horz">
+	      				<a class="nav-link" onClick="checkMe()" id="emergencytab" href="#emergencydiv">EMERGENCY</a>
+	    			</li>
+	    			<li class="nav-item horz">
+	      				<a class="nav-link" onClick="checkMe()" id="appointmenttab" href="https://reviews.solutionreach.com/vs/scott_wagner_dds/appt">Make an Appointment</a>
+	    			</li>
+	  			</ul>
+
+	  			  <div class="dropdown">
+	    			<button id="dropper" type="button" class="btn">
+	      				<img id="burger" src="https://img.icons8.com/metro/26/000000/menu.png"/>
+	    			</button>
+	  			  </div>
+			</nav>
+
+			<nav class="navbar bg-light" id="dropguide">
+
+			  <ul class="navbar-nav">
+	    		<li class="nav-item vert">
+	      			<a class="nav-link" onClick="checkMe()" href="#goal">About Us</a>
+	    		</li>
+	    		<li class="nav-item vert">
+	      			<a class="nav-link" onclick="showTab(2)">  Services</a>
+	    		</li>
+	    		<li class="nav-item vert">
+	      			<a class="nav-link" onClick="checkMe()" href="#financing">  Financing</a>
+	    		</li>
+	    		<li class="nav-item vert">
+	      			<a class="nav-link" onClick="checkMe()" id="emergencytab" href="#emergencydiv">  EMERGENCY</a>
+	    		</li>
+	    		<li class="nav-item vert">
+	      			<a class="nav-link" onClick="checkMe()" id="appointmenttab" href="https://reviews.solutionreach.com/vs/scott_wagner_dds/appt">  Make an Appointment</a>
+	    		</li>
+	  		   </ul>
+
+			</nav>
+		</div>
+
+		<div id="jumpcorrector"></div>
+
+		<div class="tabcontent">
+			<div class="okay" id="root"></div>
+
+	        <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+			<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script>
+			<script src="https://kit.fontawesome.com/d8de2d9986.js"></script>
+
+			<script type="text/babel">
+
+				function Slider() {
+					let imgStyles={
+						width:100+"%",
+						height:"auto"
+					}
+					let carouselArr = [<img src="wagner-2.jpg" alt="" style={imgStyles}/>, <img src="wagner-43.jpg" alt="" style={imgStyles}/>, <img src="wagner-4.jpg" alt="" style={imgStyles}/>, <img src="wagner-38.jpg" alt="" style={imgStyles}/>];
+					const [x, setX] = React.useState(0);
+					const goLeft = () => {
+						x === 0 ? setX(-100*(carouselArr.length-1)) : setX(x + 100);
+					};
+					const goRight = () => {
+						x === -100*(carouselArr.length-1) ? setX(0) : setX(x - 100);
+					};
+
+					return(
+						<div className="slider">
+							{carouselArr.map((item, index)=>{
+								return(
+									<div key={index} className="slide" style={{transform: `translateX(${x}%)` }}>
+										{item}
+									</div>
+								)
+							})}
+							<button id="goLeft" onClick={goLeft}><i class=" ar fas fa-chevron-left"></i></button>
+							<button id="goRight" onClick={goRight}><i class=" ar fas fa-chevron-right"></i></button>
+						</div>
+					);
+				}
+
+				ReactDOM.render(
+				    <Slider />,
+				    document.getElementById('root')
+				);
+
+			</script>
+
+			<div class="jumbotron col-md-10 center-block" id="goal">
+				<h1>Our Goal</h1>
+				<p> at Wagner Family & Cosmetic Dentistry is to assist each of our patients in achieving and maintaining long term dental
+						health and an attractive smile at an affordable rate.  This commitment to serving the Tulsa community includes providing information that helps make more informed decisions in regard to oral health, as well as first class treatment to satisfy dental needs.</p>
+			</div>
+
+			<div class="row col-md-12 center-block" id="dirmeet">
+				<button class="col-md-4" id="directions" data-toggle="modal" data-target="#myModal">
+					<img class="img-fluid" src="wagner-1.jpg" id="dir"/>
+					<div id="e2_5">
+						<div class="text">
+							<span id="e2_6"><b>9035 E 62nd St</b></span> <br>
+							<span id="e4_2">Tulsa, OK 74133</span>
+						</div>
+					</div>
+
+					<div id="e2_2">
+						<span class="text" id="e1_10"><b>Get Directions!</b></span>
+					</div>
+				</button>
+
+				<button class="col-md-7" id="meetteam" onclick="showTab(1)">
+					<img class="img-fluid" src="wagner-40.jpg" id="teammeet"/>
+					<div id="e7_7">
+						<span class="text" id="e7_8"><b>Meet Dr. Wagner and Our Amazing Team!</b></span>
+					</div>
+				</button>
+			</div>
+
+			<div class="modal" id="myModal">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+
+			      <!-- Modal Header -->
+			      <div class="modal-header">
+			        <h4 class="modal-title">Wagner Dentistry</h4>
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			      </div>
+
+			      <!-- Modal body -->
+			      <div class="modal-body">
+			        <iframe id="mapactual" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3224.7829301179845!2d-95.87667868444142!3d36.07439831591568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87b68da0f1a07be7%3A0x86c1dfaf364017f0!2sScott%20W%20Wagner%2C%20DDS!5e0!3m2!1sen!2sus!4v1597202841403!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			      </div>
+
+			      <!-- Modal footer -->
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			      </div>
+
+			    </div>
+			  </div>
+			</div>
+
+			<div id="financing">
+				<div class="row col-md-12 center-block" id="financial">
+					<div class="col-md-5 center-block" id="topfin">
+						<div class="jumbotron" id="finstate">
+							<h4>Financing</h4>
+							<h6>Whether it's a dental emergency or a routine cleaning, payment should never get in the way of receiving the best dental care possible.  That's why we're committed to providing a wide variety of financing options.  Every client deserves a payment plan that works best for them.</h6>
+						</div>
+
+						<div class="btn-group" id="finbuttons">
+							<button class="btn btn-light fintablinks" onclick="showFin(0)"><img src="creditcardclipart.png" class="finic" id="cardart"></button>
+				         	<button class="btn btn-light fintablinks" onclick="showFin(1)"><img src="insuranceclipart.png" class="finic" id="insuranceart"></button>
+				         	<button class="btn btn-light fintablinks" onclick="showFin(2)"><img src="carecreditclipart.png" class="finic" id="ccart"></button>
+						</div>
+					</div>
+
+					<div class="container-fluid col-md-6 center-block" id="wrappedfintabcontent">
+				         <div id="directpay" class="fintabcontent">
+				            <h3>Direct</h3>
+				            <p id="fintabstuff1" style="font-size: 18px;">For your convenience, we accept cash, personal checks, money orders and major credit cards, including Visa, MasterCard and Discover.  Payment is expected at the time services are performed. When more extensive dental care is necessary, financial arrangements can be made with Care Credit.</p>
+				         </div>
+
+				         <div id="insurance" class="fintabcontent">
+				            <h3>Insurance</h3>
+				            <p id="fintabstuff2" style="font-size: 13px;">As a service to our patients, our practice accepts most dental insurance programs.  Our staff will prepare all the necessary forms for your dental insurance. However, we remind you that your specific policy is an agreement between you and your insurance company. Please keep in mind that you are responsible for your total obligation should your insurance benefits result in less coverage than anticipated. Our staff will gladly submit a pre-treatment estimate to your insurance company so that you will know what your benefits will be.<br><br>
+				            The fees charged for services rendered to those who are insured are the usual and customary fees charged to all our patients for similar services. Your policy may base its allowances on a fixed fee schedule, which may or may not coincide with our usual fees. You should be aware that different insurance companies vary greatly in the types of coverage available. Also, some companies take care of claims promptly while others delay payment for several months.</p>
+				         </div>
+
+				         <div id="carecredit" class="fintabcontent">
+				            <h3>CareCredit</h3>
+				            <p style="font-size: 12px">We’re pleased to offer our patients CareCredit. CareCredit lets you begin your treatment immediately – then pay for it over time with low monthly payments that fit easily into your monthly budget. <br><br>
+
+							CareCredit offers a full range of No Interest and Extended Payment Plans:</p>
+
+							<li style="font-size: 12px">6, 12 & 18 month plan options (some restrictions may apply)<br>
+							No interest if the balance is paid within the specified time period<br>
+							Low minimum monthly payments</li>
+							<li style="font-size: 12px">24, 36, 48 & 60 month plan options (some restrictions may apply)<br>
+							Monthly payments as low as $25.00  (Interest rates may vary)</li>
+
+							<p style="font-size: 12px">Apply for CareCredit and you'll receive an online decision in seconds! Click the button below to apply now or
+							email or call our office for more details!</p>
+
+							<br>
+
+							<a id="applycarecredit" href="https://carecredit.com/go/TBX526"><b>Learn More and Apply Here!</b></a>
+
+				         </div>
+
+				       </div>
+				</div>
+			</div>
+
+			<div id="resources">
+				<div id="row col-md-12 center-block" id="resbox">
+					<button class="col-md-5 resbut" id="historyform" onclick="window.location.href='Current_Patient_Information.pdf';">
+						<img class="img-fluid res" src="wagner-41.jpg" id="hispic"/>
+						<div class="text" id="hfor">
+							<span><b>Print Health History Form!</b></span>
+						</div>
+					</button>
+
+					<button class="col-md-5 resbut" id="privacystate" onclick="window.location.href='WagnerPrivacyPolicy.pdf';">
+						<img class="img-fluid res" src="wagner-34.jpg" id="privpic"/>
+						<div class="text" id="privstate">
+							<span><b>Review Our Privacy Policy!</b></span>
+						</div>
+					</button>
+				</div>
+			</div>
+
+			<div id="emergencydiv">
+				<div class="jumbotron" id="emergencymessage">
+					<p>Life moves fast, and the last thing anyone needs is being slowed down. Whether you have a worsening toothache, a sport/work related injury, or anything in between, Wagner Family and Cosmetic Dentistry can help you with a same day appointment! To schedule a visit, just give us a call at (918)-622-3915!</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="tabcontent" id="biopage">
+			
+			<div class="row" id="bios">
+
+				<a class="col-md-2" href="#" data-toggle="popover" title="Dr. Scott Wagner, DDS" data-content="Dr. Wagner, your Tulsa Dentist, is a 1997 graduate of the University of Oklahoma College of Dentistry, has enjoyed a successful practice in Tulsa
+				for more than 22 years.  He is a member of the Oklahoma Dental Association, The Tulsa County Dental Association as well as the American Dental
+				Asociation.  Dr. Wagner is committed to ongoing professional education to   continually enhance his clinical skills in cosmetic dentistry, aesthetics
+				and smile design.  Dr. Wagner enjoys spending time with his wife Tracy and their two children Jackson and Addi.">
+					<img class="img-fluid" id="bip1" src="staffpic1.jpg">
+				</a>
+
+				<a class="col-md-2" href="#" data-toggle="popover" title="Paige, Dental Assistant" data-content="Paige has been a Dental Assistant for over nine years.  Paige is passionate about providing excellent patient care and helping our patients to relax  
+				and feel  comfortable while they are in our office.  Paige spends her free time with her husband Aaron and 4 year old daughter Laynee. ">
+					<img class="img-fluid" id="bip2" src="staffpic2.jpg">
+				</a>
+
+				<a class="col-md-2" href="#" data-toggle="popover" title="Lindsay, Dental Hygienist" data-content="Lindsay is a graduate from the University of Oklahoma with a Bachelor of Science in Dental Hygiene. She enjoys her profession as a hygienist, with
+				a passion of teaching patients how to care for their beautiful smiles and its relation to their overall health. Lindsay takes pride in developing lasting
+				relationships with her patients and making their visit to the dentist a walk in the park.  Lindsay strives to provide the highest standard of dental
+				care, and always with a gentle touch and smile.  Outside of the office Lindsay enjoys spending time with her daughter Stella and her husband
+				Jimmy, as well as their two golden retrievers, Norman and Chandler.  ">
+					<img class="img-fluid" id="bip3" src="staffpic3.jpg">
+				</a>
+
+				<a class="col-md-2" href="#" data-toggle="popover" title="Shelli, Dental Hygienist" data-content="Shelli has been a hygienist for over 13 years. There is more to her job than aiding in preventive dentistry, periodontal treatment and detection,
+				recommending therapeutic products, and providing patient education. She also makes sure your teeth are healthy and beautiful. Her experience
+				always compliments your treatment, as Shelli knows dentistry well. Outside of the office, Shelli enjoys spending time with her son Ty and husband
+				Curtis and goes to Mexico every chance she gets.  ">
+					<img class="img-fluid" id="bip4" src="staffpic4.jpg">
+				</a>
+
+			</div>
+
+			<div class="row" id="bios2">
+
+				<a class="col-md-2" href="#" data-toggle="popover" title="Gayle, Hygiene Coordinator" data-content="Gayle is usually the one that will call to remind you of your appointment.  She also is the one that will be calling and texting you if you miss your
+				appointment.    Gayle  has been with our office for a very long time and has developed some great relationships with our patients.  In her spare time
+				she enjoys spending time with her grandchildren and great-granddaughter.  Gayle is very active in her church.   ">
+					<img class="img-fluid" id="bip5" src="staffpic5.jpg">
+				</a>
+
+				<a class="col-md-2" href="#" data-toggle="popover" title="Shannan, Front Office Coordinator" data-content="Shannan is one of the first people you will meet when you come into our office.   Shannan can help you with all your appointment needs and  
+				coordinate with other provider offices.  Shannan will generally be the one that answers the phone if you call our office.  Shannan is also a Dental
+				Assistant and will sometimes be helping out in the back when we need an extra set of hands.  She is a valuable asset to our office.  Shannan enjoys
+				spending time with her husband Michael, their children and grandchildren.">
+					<img class="img-fluid" id="bip6" src="staffpic6.jpg">
+				</a>
+
+				<a class="col-md-2" href="#" data-toggle="popover" title="Tonya, Office Manager" data-content="Tonya is the one that you will need to talk to if you have any questions regarding your insurance or treatment plan.  Tonya is also our website
+				manager and handles all of our marketing efforts, including building this website.  She also heads up our 'fast-growing' Invisalign and Cosmetic
+				practice including Lumineers and can answer any questions you may have about Invisalign, Lumineers or any of our other services as well as
+				financing options if needed.  When not at work Tonya enjoys spending time with her boyfriend Adam and hanging out with any of their combined 7
+				children as well as their two grandchildren.">
+					<img class="img-fluid" id="bip7" src="staffpic7.jpg">
+				</a>
+
+
+			</div>
+
+		</div>
+
+		<div class="tabcontent" id="services">
+				    <div class="row" id="servbox">
+				    	<h3>Services</h3>
+				        <div class="row col-md-12" id="servcont">
+				        	<div class="col-md-3" =id="servnav">
+				            <!-- tabs left -->
+					            <div class="tabbable">
+					                <ul class="nav nav-pills nav-stacked col-md-3">
+					                    <button onClick="openCity(event, 'invisalign')" data-toggle="tab"><li class="tabber">Invisalign (clear Braces)</li></button>
+					                    <button onClick="openCity(event, 'invisalignteen')" data-toggle="tab"><li class="tabber active">Invisalign for Teens</li></button>
+					                    <button onClick="openCity(event, 'sixmonthsmile')" data-toggle="tab"><li class="tabber">Six Month Smile Braces</li></button>
+					                    <button onClick="openCity(event, 'lumineers')" data-toggle="tab"><li class="tabber">Lumineers</li></button>
+					                    <button onClick="openCity(event, 'cosmetic')" data-toggle="tab"><li class="tabber">Cosmetic Services</li></button>
+					                    <button onClick="openCity(event, 'oralhc')" data-toggle="tab"><li class="tabber">Oral Health & Cleanings</li></button>
+					                    <button onClick="openCity(event, 'dentaltreat')" data-toggle="tab"><li class="tabber">Dental Treatments</li></button>
+					                    <button onClick="openCity(event, 'teethwhite')" data-toggle="tab"><li class="tabber">Teeth Whitening</li></button>
+					                    <button onClick="openCity(event, 'crowns')" data-toggle="tab"><li class="tabber">Crowns</li></button>
+					                    <button onClick="openCity(event, 'veneers')" data-toggle="tab"><li class="tabber">Veneers</li></button>
+					                    <button onClick="openCity(event, 'sealants')" data-toggle="tab"><li class="tabber">Sealants</li></button>
+					                    <button onClick="openCity(event, 'rootcanals')" data-toggle="tab"><li class="tabber">Root Canals</li></button>
+					                    <button onClick="openCity(event, 'dentimp')" data-toggle="tab"><li class="tabber">Dental Implants</li></button>
+					                    <button onClick="openCity(event, 'dentbridge')" data-toggle="tab"><li class="tabber">Dental Bridges</li></button>
+					                    <button onClick="openCity(event, 'gumdisease')" data-toggle="tab"><li class="tabber">Gum Disease</li></button>
+					                </ul>
+					            </div>
+				        	</div>
+				            <div class="tab-content col-md-8" id="words">
+				                <div class="tab-pane active" id="invisalign">* FREE No-obligation Invisalign Consultation
+
+								* FREE Invisalign Records (impression, photos and x-rays - $500.00 value) so you can see what your teeth will look
+								like before you make a decision on treatment.  Also, receive free tooth whitening with your Invisalign treatment.
+
+								Call today to reserve your appointment (918) 622-3915
+
+								* We offer 0% financing
+
+								Have you ever wondered what you would look like with straight teeth?  With ClinCheck a virtual 3-D software, we are
+								able to show you how your teeth would look when the Invisalign treatment is complete.
+
+								You can also take the online assessment by clicking here to see
+								if Invisalign will fit your lifestyle.
+
+								* Some restrictions may apply
+
+								Invisalign® is, in most cases, more affordable than traditional braces and if your insurance covers Orthodontics it will
+								usually cover Invisalign as well.
+
+								We also have financing available to help if needed.
+
+								Keep reading to learn more about how Invisalign® can help you or call our office for more information.  Dr. Wagner
+								has treated many patients and have achieved amazing results with Invisalign®.  
+
+								Invisalign® straightens your teeth with a series of clear, virtually invisible custom-molded aligners.  Invisalign®. With
+								breakthrough technology that lets you have the smile you've always wanted — without the hassle of braces.
+
+								The clear alternative to metal braces.
+								By using a series of clear, removable aligners, Invisalign® straightens your teeth with results you'll notice sooner than
+								you think. The course of treatment involves changing aligners approximately every two weeks, moving your teeth into
+								straighter position step by step, until you have a more beautiful smile. And unlike braces, these clear aligners can be
+								removed while you eat and brush your teeth as usual.
+
+								Less treatment time.
+								An average Invisalign® course of treatment takes about a year. You'll see Dr. Wagner every 6 to 8 weeks for
+								adjustments and to check progress. At regular intervals, you'll receive a new set of custom-molded clear aligners to
+								continue the straightening process. The total number of clear aligners is specific to you, determined by Dr. Wagner for
+								your course of treatment.
+
+								Clear. And comfortable.
+								Since Invisalign® is practically invisible, there's no unwarranted attention to your mouth. In fact, very few people will
+								notice at all - unless you tell them. They're comfortable to wear and remove easily when you eat, brush, and floss.
+
+								All across the country, people like you now have great smiles and straighter teeth, thanks to Invisalign®. Why not
+								join them?
+
+								</div>
+				                <div class="tab-pane" id="invisalignteen">Here's a quick look at the main steps of your treatment:
+
+								A brief consultation and find out if Invisalign Teen is right for
+								you.
+
+								We will take photos, x-rays and impressions of your teeth.
+
+								Those pictures and impressions are digitized. Then, Dr. Wagner
+								can use the 3D renderings to precisely plan your tooth
+								movements from the beginning to the end of your treatment, in
+								order to fix your orthodontic issue(s).
+
+								Based on the precise treatment plan, aligners will be made to
+								custom-fit your teeth. The number of aligners changes for each
+								person.
+
+								You'll wear your aligners about 20 to 22 hours everyday,
+								except to eat, brush, and floss, or go to a special event.
+
+								Approximately every two weeks, you'll swap your old aligners
+								for new ones.  The aligners will gently and continuously move
+								your teeth until they are in their final prescribed position, all
+								without the usual hassle of metal braces.
+
+								The Low Down
+
+								You no longer have to straighten your teeth the old-fashioned
+								way, with metal braces. The Invisalign Teen™ system lets you do
+								it the modern, hygienic way. Your new smile is created with the
+								most innovative technology – a series of clear aligners that are
+								custom-fit to your teeth.
+
+								The first thing you should know is that an average treatment
+								takes about a year. Your treatment can begin even if you don't
+								have all of your permanent teeth. Invisalign Teen was designed
+								to meet your needs.
+
+								The Aligners...
+
+								snap on your teeth easily.   
+								are comfortable and practically invisible.
+								allow for your growing permanent teeth.
+								gently and continuously move your teeth in small
+								increments.
+								are worn for about two weeks.  Then you swap them for a
+								new pair.
+								have a Blue Dot Wear Indicator, designed to show an
+								estimation of wear-   time. The dot is designed to fade to
+								clear over a two-week period if you wear (20 to 22 hours
+								everyday) your aligners properly.
+								can be removed for eating, brushing, and flossing, or going
+								to a special event.
+								are replaceable if lost. That's right, you get up to six free
+								individual aligners.
+								</div>
+				                <div class="tab-pane" id="sixmonthsmile">Six Month Smiles® is a modern twist on tried-and-true orthodontics.  There is little
+								debate within the orthodontic community that braces are the most widely used and
+								most effective method to give patients straight, healthy teeth and a beautiful smile.  
+								Six Month Smiles has taken the best aspects of braces and modified the treatment and
+								the materials to give adults a common-sense, cosmetic solution that fits your lifestyle.  
+
+								Here is what makes Six Month Smiles so innovative …
+
+								Average treatment time of only six months
+
+								Six Month Smiles Lucid-Lok® clear brackets and tooth-colored wires are barely visible
+
+								Use of braces has shown to provide the most conservative and predictable final result
+
+								Six Month Smiles Patient Tray Kits™ ensure that your appointments are fast and
+								comfortable
+
+								Low forces and short overall treatment times increase comfort, safety, and hygiene
+
+								Six Month Smiles is less expensive than traditional braces, aligner therapy, or veneers 
+								</div>
+				          		<div class="tab-pane" id="lumineers">
+								LUMINEERS porcelain veneers can make everyone’s smile more
+								beautiful without removing painful tooth structure!
+
+								Call Tonya today for a free no-obligation consultation to see if
+								Lumineers are right for you.
+
+								The Greatest Breakthrough in the History of Dentistry
+
+								LUMINEERS - Porcelain Veneers That Do Not Require
+								Removing Painful Tooth Structure
+
+								LUMINEERS BY CERINATE is a terrific cosmetic solution for
+								permanently stained, chipped, discolored, misaligned teeth, or
+								even to revitalize old crown and bridgework. LUMINEERS BY
+								CERINATE is a porcelain veneer that can be made as thin as a
+								contact lens and is placed over existing teeth without requiring
+								painful removal of sensitive tooth structure (unlike traditional
+								veneers.)
+
+								LUMINEERS can only be made from patented Cerinate porcelain.
+								This revolutionary porcelain is crafted through a proprietary
+								process unavailable anywhere other than the Cerinate Smile
+								Design Studios owned by Den-Mat Corporation. In just two or
+								three visits to our office, LUMINEERS provides a custom-made
+								smile clinically proven to last up to 20 years.
+								</div>
+				                <div class="tab-pane" id="cosmetic">
+								The following professional services can completely change the
+								look of a smile, by covering or correcting gaps, chips, cracks,
+								exposed roots, stains, and even crooked teeth...
+
+								Tooth-Colored Fillings – These offer natural-looking restorations
+								and increased durability.
+
+								Lumineers- Porcelain veneers or laminates can often provide
+								people who have chipped, stained, discolored, unevenly spaced,
+								or even slightly crooked front teeth with a completely new-
+								looking smile in just a few simple appointments.
+
+								Teeth Whitening – For patients challenged with teeth
+								discoloration, we use this product in the office. We also provide
+								a “take home” whitening program with noticeable results within
+								two weeks.
+
+								Implants - Implant supported crowns to replace missing teeth.
+
+								All-Porcelain Crowns, Onlays and Inlays - These metal-free
+								restorations result in a more pleasing appearance, without the
+								gray shadow at the gum line.
+
+								Invisalign - The first removable, virtually invisable way to
+								straighten your teeth.
+
+								Veneers - Thin porcelain shields that are bonded to the front of
+								your teeth to create a dramatic change in your smile without
+								drilling, shots, pain or removal of sensitive tooth structure.
+
+								Bridges - Bridges to fill the gaps of any missing teeth by securing
+								a crown that is attached to the teeth on each side of the missing
+								tooth.
+
+								Dr. Wagner also offers a free no-obligation second opinion.
+								</div>
+				                <div class="tab-pane" id="oralhc">
+				                Our primary objective is to help you achieve and maintain
+								optimum oral health. Our Preventive Care Services will help you keep smiling for years to come…
+
+				                To understand what happens when your teeth decay, it's helpful to know what's in your mouth
+								naturally. Here are a few of the elements:
+
+								Saliva — Your mouth and teeth are constantly bathed in saliva. We never give much thought to our
+								spit, but this fluid is remarkable for what it does to help protect our oral health. Saliva keeps teeth and
+								other parts of your mouth moist and washes away bits of food. Saliva contains minerals that
+								strengthen teeth. It includes buffering agents. They reduce the levels of acid that can decay teeth.
+								Saliva also protects against some viruses and bacteria.
+
+								Plaque — Plaque appears as a soft, gooey substance that sticks to the teeth a bit like jam sticks to a
+								spoon. It is, in fact, colonies of bacteria, protozoa, mycoplasmas, yeasts and viruses clumping together
+								in a  gel-like organic material. Also in the mix are bacteria byproducts, white blood cells, food debris and
+								body tissue. Plaque grows when bacteria attach to the tooth and begin multiplying. Plaque starts
+								forming immediately after a tooth is cleaned; it takes about an hour for plaque to build up to
+								measurable levels. As time goes on, different types of microorganisms appear, and the plaque thickens.
+
+								Calculus — If left alone long enough, plaque absorbs minerals from saliva. These minerals form crystals
+								and harden the plaque into calculus. Then new plaque forms on top of existing calculus. This new layer
+								can also become hard.
+
+								Bacteria — We have many types of bacteria in our mouths. Some bacteria are good; they help control
+								destructive bacteria. When it comes to decay, Streptococcus mutans and Lactobacilli are the bacteria
+								that cause the most damage to teeth.
+
+								How Your Teeth Decay
+
+								The bacteria in your mouth need food to live and multiply. When you eat sugary foods and other
+								carbohydrates, the bacteria use them as food, too. The bacteria then produce acids that can dissolve
+								tooth enamel (outer layer of the tooth).
+
+								It's not just candy and ice cream we're talking about. All carbohydrate foods eventually break down
+								into simple sugars. These include glucose and fructose. Some of this process begins in the mouth.
+
+								Foods that break down into simple sugars in the mouth are called fermentable carbohydrates. These
+								include the obvious sugary foods, such as cookies, cakes, soft drinks and candy. But they also include
+								pretzels, crackers, bananas, potato chips and breakfast cereals.
+
+								Bacteria in your mouth turn the sugars in these foods into acids. These acids begin to dissolve the
+								mineral crystals in teeth. The more times you eat each day, the more times your teeth are exposed to
+								an acid attack.
+
+								This attack can lead to tooth decay, also known as dental caries. First, the acid begins to dissolve
+								calcium and phosphate crystals inside a tooth. A white spot may appear on the enamel in this
+								weakened area. But the loss of minerals develops beneath the surface of the enamel. The surface may
+								still be smooth.
+
+								At this stage, the tooth can be repaired with the help of fluoride, proteins and minerals (calcium and
+								phosphate) in the saliva. The saliva also helps reduce the acid levels from bacteria that attack the tooth.
+
+								Once the decay breaks through the enamel to cause a cavity, the damage is permanent. A dentist must
+								clean out the decay and fill the cavity. Left untreated, the decay will get worse. It can destroy a tooth
+								all the way through the enamel, through the inside dentin layer and down to the pulp or nerve of the
+								tooth. That's why it is important to treat caries at a very early stage, when the process can be reversed.
+
+								Types and Stages of Decay
+
+								Young children can get a type of decay called baby bottle tooth decay or early childhood caries. It
+								destroys enamel quickly. This type of decay is common in children who are put to sleep with a bottle of
+								milk or juice. The bottle exposes the teeth constantly to carbohydrates through the night. Bacteria can
+								grow rapidly and produce acid that decays teeth.
+
+								Decay can become worse if the parent does not clean the child's teeth. It can eat through enamel and
+								leave a large cavity in a matter of months.
+
+								In older adults, the exposed roots of teeth can develop cavities. This is called root caries. Older adults
+								are more likely to have receding gums caused by years of hard brushing or periodontal disease. They
+								also are more likely to have dry mouth (xerostomia). The decrease in saliva results in less protection of
+								the teeth. This increases the risk of decay. Many common medicines can cause dry mouth. Be sure to
+								ask the doctor or pharmacist if any of your medicines cause dry mouth.
+
+								Decay can form beneath fillings or other tooth repairs, such as crowns. Sometimes bacteria and bits of
+								food can slip between the tooth and a poorly placed filling or crown. This also can happen if the filling
+								cracks or pulls away from the tooth, leaving a gap.
+
+								Preventing Cavities
+
+								Do you or your family members get cavities often? Dental research has found out that certain factors
+								can affect your risk of tooth decay. These factors include
+
+								The current number of decayed or filled teeth
+								Your fluoride exposure
+								Family history of decay
+								How well you take care of your teeth
+								The amount of saliva and the balance of minerals, enzymes and buffering agents it contains
+								How often and what types of foods you eat (especially carbohydrates)
+								Ask your dentist about the best ways to reduce your risks and limit dental decay.
+
+								To prevent your teeth from decaying, you can do two things:
+
+								Strengthen your teeth's defenses with fluoride, sealants and agents that contain calcium and
+								phosphateions.
+								Reduce the number of bacteria in your mouth.
+								Fluoride penetrates into teeth. It strengthens them by replacing minerals that acid has destroyed. The
+								benefits of fluoride to teeth were first discovered in the 1930s. Dentists started to notice that people
+								who drank water that naturally contained fluoride had less tooth decay. In 1945, communities started
+								to add fluoride to water supplies. Adding fluoride to water systems has been the most successful cavity
+								prevention method to date.
+
+								In the early 1960s, fluoride also began to be added to toothpaste. This also had a major impact on
+								cavity prevention. Now almost all toothpastes contain fluoride. Everyone should brush with a fluoride
+								toothpaste every day. Dental offices sometimes recommend higher levels of fluoride in toothpastes,
+								gels and mouth rinses for both children and adults.
+
+								More recently, agents containing calcium and phosphate have been developed. MI Paste and MI Paste
+								Plus both contain Recaldent (the calcium-phosphate ingredient). Your dentist can apply them to your
+								teeth. Recaldent also can be found in chewing gum (some Trident products) and toothpaste. These
+								agents help prevent and reverse early decay that has not yet led to a cavity.
+
+								Sealants are protective coatings placed over the tops of the back teeth — molars and premolars. They
+								block bacteria and acids from sticking in the tiny grooves on the chewing surfaces of these teeth.
+								Sealants can be placed in adults and children. Children can have sealants on their baby molars, and also
+								on the permanent molars once they come in. Dentists can put sealants on molars with signs of early
+								decay, as long as the decay hasn't broken through the enamel.
+
+								You can never get rid of all the bacteria in your mouth. But you can take steps to control bacteria:
+
+								Brush twice a day.
+								Floss daily.
+
+								Reduce the number of times each day that you consume fermentable carbohydrates.  Some
+								prescription mouthwashes (those that contain chlorhexidine) reduce bacteria in your mouth. This can
+								help prevent decay. Chewing sugarless gums, especially those with xylitol, can help reduce bacteria
+								levels and increase the flow of saliva.
+
+								Most importantly, visit your dentist regularly. Then the dentist can find any decay early, when it can be
+								treated and reversed.
+								</div>
+				                <div class="tab-pane" id="dentaltreat">The following professional services can repair seriously decayed, weakened,
+								broken or missing teeth, relieving pain and restoring your smile...
+
+								Tooth-Colored Fillings - These offer natural-looking restorations and
+								increased durability.
+
+								       Lumineers & Porcelain Veneers - These life-like restorations improve the
+								smile by changing the shape of the tooth, closing spaces, lengthening the
+								tooth and hiding the discoloration of teeth.  
+
+								Whitening - Whitening treatments can produce precise, lasting shades and
+								minimal sensitivity.
+
+								All-Porcelain Crowns, Onlays and Inlays - These metal-free restorations
+								result in a more pleasing appearance, without the gray shadow at the gum
+								line.
+
+								Bridges - When a tooth is missing, a porcelain bridge is used to fill the
+								space and to stabilize the remaining teeth, preventing them from drifting or
+								tilting.
+
+								Implants, Dentures & Partial Dentures - Dentures replace multiple missing
+								teeth or fill the spaces created by missing teeth.  
+								</div>
+				                <div class="tab-pane" id="teethwhite">One Hour Whitening
+
+								Your lifestyle and the aging process can stain and darken your
+								teeth. Many things we do on a regular basis can contribute to
+								stained teeth, such as drinking coffee, tea, cola and red wine or
+								smoking.
+
+								Whitening can get your smile looking its best. You should look for
+								a whitening procedure that is:  
+								Fast and convenient
+								Long lasting
+								Low sensitivity
+								Proven to be safe and effective
+								Performed by a Dental Professional
+
+								Our One Hour Whitening System is a revolutionary tooth
+								whitening procedure. It's safe, effective and fast - very fast. In
+								just over an hour, your teeth will be dramatically whiter.  This
+								form of whitening is ideal for anyone looking for immediate
+								results.
+
+								This whitening procedure is simple and painless. It begins with a
+								short preparation to isolate your lips and gums. Then the special
+								formulated gel is applied, which is activated by a specially
+								designed light. Teeth typically become at least six to ten shades
+								whiter, sometimes more. A five-minute fluoride treatment
+								completes the procedure. You will be amazed with the results! In
+								most cases, your teeth will get even whiter the first few days
+								after the procedure.
+
+
+								In addition to our One Hour Whitening procedure, which offers
+								immediate results, we also offer less expensive alternatives such
+								as Custom Made Bleaching Trays and Whitestrips, which are
+								stronger than the ones you can purchase in stores.
+
+								Call our office today at (918) 622-3915 to schedule an
+								appointment.
+
+								Your only a phone call away from the whiter, more youthful
+								looking smile you have always wanted.
+								</div>
+				                <div class="tab-pane" id="crowns">Crowns are an ideal restoration for teeth, which have been broken, or have been weakened by decay
+								or a very large filling.  The crown fits right over the remaining part of the tooth, making it strong and
+								giving it the shape and contour of a natural tooth. Crowns are sometimes also known as 'caps'.
+
+
+
+								Why would I need a crown?
+								There are a number of reason. For Instance:  the tooth may have been weakened by having a very
+								large filling, you may have discolored fillings and would like to improve the appearance of the tooth,
+								you may have had a root canal which will require a crown to protect it.
+
+								What are crowns made of?
+								Crowns are made of a variety of materials, and new materials are continually being introduced. Here
+								are some of the options available at present:
+
+								Full Porcelain bonded to precious metal: A precious metal base is made and porcelain is then applied in
+								layers over it.
+
+								Full Porcelain: These crowns are not as strong as bonded crowns but they can look very natural and
+								are most often used for front teeth.
+
+								Precious metal (gold and palladium): These crowns are very strong and  hard wearing, but are usually
+								used at the back of the mouth, where they are not visible.
+
+								How is a tooth prepared for a crown?
+								Dr. Wagner will prepare the tooth to the ideal shape for the crown. This will involve removing most of
+								the outer surface, and leaving a strong inner 'core'. The amount of the tooth removed will be the
+								same as the thickness of the crown to be fitted. Once the tooth is shaped, Dr. Wagner will take an
+								impression of the prepared tooth. The impressions will be given to the technician, along with any
+								other information needed to make the crown.
+
+								Will the crown be noticeable?
+								No. The crown will be made to match your other teeth. The shade of the neighbouring teeth will be
+								recorded, to make sure that the colour looks natural and matches the surrounding teeth. A temporary
+								crown, will be fitted at the end of the first appointment to last until the permanent one is ready. These
+								temporary crowns may be more noticeable, but they are only a temporary measure.
+
+								How long does the treatment take?
+								At least two visits are needed, the first for the preparation, impression, shade taking and fitting the
+								temporary crown, and the second to fit the permanent crown.
+								 
+								Does it hurt to have a tooth prepared for a crown?
+								No. A local anaesthetic is used and the preparation should feel no different to that of a filling. If the
+								tooth does not have a nerve, and a post crown is being prepared, then local anaesthetic may not be
+								needed.
+								 
+								How long will a crown last?
+								The life of a crown will depend on how well it is looked after. The crown itself cannot decay, but decay
+								can start where the edge of the crown joins the tooth. It is very important to keep this area as clean
+								as your other teeth, or decay may occur which could endanger the crown. Properly cared for crowns
+								will last for many years.
+								 </div>
+				                <div class="tab-pane" id="veneers">Are you unhappy with your smile?
+
+								Porcelain veneers are a popular choice
+								for people looking to improve their
+								smile.
+
+								Dental veneers are thin shells of
+								porcelain that are custom fitted to the
+								surface of your teeth.
+
+								Porcelain veneers can dramatically
+								change
+								dark, stained, and even crooked teeth
+								in just two visits.
+
+								Most patients are surprised to learn
+								that porcelain veneers resist staining.  
+								Porcelain veneers are composed of a
+								ceramic material. The porcelain
+								veneers' surface is very similar to glass
+								and will not be stained by coffee,
+								smoking, or other habits.
+
+								We offer a free no-obligation
+								consultation for dental veneers, as well
+								as bleaching, and Invisalign.
+
+								If you are considering porcelain
+								veneers call us at 918-622-3915
+								today to schedule an appointment.
+								 </div>
+				                <div class="tab-pane" id="sealants">What are dental Sealants?
+
+								A dental sealant (also called a pit and fissure sealant) is a plastic, professionally-applied material that is put
+								on the chewing surfaces of back teeth to prevent cavities.
+
+								Sealants provide a physical barrier so that cavity-causing bacteria cannot invade the pits and fissures on
+								the chewing surfaces of teeth.
+
+								Why should my child get dental sealants?
+
+								Since the early 1970's, childhood dental caries on smooth tooth surfaces (those without pits and
+								fissures) has declined markedly because of widespread exposure to fluorides.  By 1986-1987,
+								approximately 90 percent of the decay in children's teeth occurred in tooth surfaces with pits and
+								fissures, and almost two-thirds were found on the chewing surfaces alone. Dental sealants have been
+								shown to prevent tooth surfaces with pits and fissures. Sealants have been approved for use for many
+								years and are recommended by professional health associations and public health agencies.
+								agencies.
+
+
+								When should my child get dental sealants?
+
+								sealants were applied routinely to susceptible tooth surfaces in conjunction sealants were applied
+								routinely to susceptible tooth surfaces in conjunction with the appropriate use of fluoride, most tooth
+								decay in children could be prevented.
+
+
+								Second permanent molars erupt into the mouth at about age 12 years. Pit and fissure surfaces of these
+								teeth are as susceptible to dental caries as the first permanent molars of younger children. Therefore,
+								young teens need to receive dental sealants shortly after the eruption of their second permanent molars.
+
+								Are dental sealants just for kids?
+
+								The potential to develop pit and fissure decay begins early in life, so children and teenagers are obvious
+								candidates. But some adults at high risk of decay can benefit from sealants as well. Your dentist can tell
+								you if you would benefit from dental sealants.
+
+								Do dental sealants replace fluoride?
+
+								No. Fluorides, such as those used in community water, toothpaste, gels, varnish, and mouthrinse also
+								help to prevent decay. Fluoride works best on the smooth surfaces of teeth. The chewing surfaces on the
+								back teeth, however, have tiny grooves where decay often begins. Sealants keep cavity-causing bacteria
+								out of the grooves by covering them with a safe plastic coating. Sealants and fluorides work together to
+								prevent tooth decay.
+								</div>
+				                <div class="tab-pane" id="rootcanals">WHAT IS ENDODONTIC (ROOT CANAL) TREATMENT?
+								It used to be that if a tooth was infected or the nerve in the tooth was dying, the treatment the
+								infection can be treated, the injured nerve taken out and the pain associated with such symptoms
+								alleviated.
+
+								A common reason for root canal treatment is an infected or abscessed tooth, which may result from a
+								deep cavity, periodontal disease, or even a fractured tooth. Sometimes, trauma - like a sharp blow to the
+								mouth can result in damage to the pulp of the tooth. Should you have symptoms such as swelling,
+								sensitivity to hot and cold or discomfort on touching your tooth, a dentist should be consulted
+								immediately.
+
+								Root Canal treatment removes the pulp tissue, which is composed of a nerve and blood supply within
+								the tooth. After all the material has been removed from within the root, the canal or canals if it is a
+								multi-rooted tooth, are sterilized and sealed with a material that prevents bacteria from reentering.
+
+								Because a root canal removes everything, which feeds the tooth and keeps it alive the tooth will become
+								very brittle after a period of time. This time period varies from person to person. It is for that reason
+								that the tooth should be restored as quickly as possible and your dentist might recommend that a post
+								and a crown be placed as a final restoration. Back teeth are usually crowned or capped shortly after a
+								root canal has been performed to prevent the tooth from shattering due to the pressure put on it by
+								chewing.
+
+								Root canal work is not uncomfortable, and in some instances can be performed in one visit. The
+								discomfort associated with root canal is due to the infection associated with the need for the root canal.
+								If there is recurring pain after the root canal has been started, or after it is completed be sure to notify
+								your dentist as soon as possible.
+								</div>   
+				                <div class="tab-pane" id="dentimp">Missing and damaged teeth are a common problem for many people. If you are missing your natural
+								teeth you may find that there are other things you miss too. You may miss your natural smile or not
+								being able to eat the food you desire. Perhaps your remaining teeth are shifting, or you suffer from
+								muscle strain and headaches. It doesn't have to be this way. With dental implants and prosthetic
+								solutions, most people can get new teeth that look, feel and function like the real thing.
+
+
+								What Is An Implant?
+
+								What is an implant and why is it used? An implant is a synthetic metallic root substitute that is placed
+								(implanted) in the jawbone. It can be used to either replace a single missing tooth, provide an abutment
+								(anchor or retainer) to replace several missing teeth, or be used as a retainer to provide added retention
+								to a removable dental appliance - such as a full denture. In fact, if you are missing all of your natural
+								teeth, it is possible to have maxillary (upper) and mandibular (lower) fixed replacements - the
+								replacements do not come out and you cannot remove them yourself, even if you want to!
+
+								A dental implant is a small titanium fixture that serves as the replacement for the root portion of a missing
+								natural tooth. The implant is placed in the bone of the upper or lower jaw and allowed to bond with the
+								bone and serve as an anchor for the replacement tooth. Dental implants can be used to replace a single
+								lost tooth or many missing teeth. Implant supported replacement teeth look, feel and function like
+								natural teeth. Dental implants are a proven restorative option with a long clinical history. Dental implants
+								preserve the integrity of the facial structure and reduce the inconvenience associated with tooth loss.
+
+								Benefits
+
+								Improved Appearance
+
+								When teeth are lost, ongoing shrinkage of the jawbone occurs making the face look older. Dental
+								implants can slow or stop this process. Dental implants look and feel like your own natural teeth.
+
+								Improved Comfort
+
+								Dental implants eliminate the pain and discomfort of removable full or partial dentures. Since dentures sit
+								on top of the jawbone and gums, continuous shrinkage of  the jaw bone alters the fit of the denture
+								resulting in slipping or rocking of the dentures. Exposed nerves and irritation of the gum tissue may add
+								to the discomfort.
+
+								Implant supported replacement teeth are like natural teeth because they are anchored securely to your
+								jawbone. Gum irritation and the pain of exposed nerves associated with conventional full or partial
+								dentures are eliminated.
+
+								Improved Speech
+
+								With ill fitting dentures, the teeth slip and slide around the mouth. The facial muscles become tense in an
+								attempt to hold the teeth in place. This often results in mumbling, slurred speech or clicking noises.
+								Replacement teeth allow you to speak with confidence in a relaxed and natural tone.
+
+								Eat Better
+
+								Dental implants can restore chewing efficiency comparable to that of natural teeth. This allows you to eat
+								your favorite foods with confidence and without pain, enjoy what everyone is eating and not think twice
+								about it. A full upper denture covers the palate of the mouth and reduces the ability to taste foods. With
+								dental implants, you can have the palate removed from your upper denture so you can taste and enjoy
+								your food.
+
+								Convenience
+
+								Dental implants can eliminate the numerous embarrassing inconveniences of removable  partial and full
+								dentures. You will eliminate the use of gooey denture adhesives that must be re-applied throughout the
+								day. You will no longer need to cover your mouth when you laugh or smile, for fear that your teeth will
+								pop out or fall down.
+
+								Protect Your Remaining Natural Teeth
+
+								Dental implants are often more appropriate than a bridge for the replacement of one or more adjacent
+								teeth. With conventional bridgework, the teeth surrounding missing teeth must be ground down. Dental
+								implants often eliminate the need to modify these teeth, resulting in a conservative, yet esthetic
+								restoration.
+
+								How Long Does It Take?
+
+								Two separate events are needed in replacing a missing tooth with an implant. First, there is the surgical
+								phase when the implant is placed, and second the prosthetic phase, where the replacement teeth are
+								constructed and fixed into the proper position.
+
+								Implant placement procedure involves making a small incision in the gum area where the implant is to be
+								placed, preparing a site in the underlying bone, inserting the implant into the prepared site, and closing
+								the tissue over the implant with several sutures. This area is left undisturbed for several months - usually
+								4 - 6 months. More healing time may be required for more involved situations. This is not uncommon.
+								Because the lower jaw is composed of bone that is more dense than the upper jaw, the healing time is
+								usually less when an implant is placed in the mandible. This 4 - 6 month healing process is nothing that
+								you can feel. It relates only to the slow integration of the implant with your jaw. This integration occurs
+								slowly.
+
+								After the healing and integration of the implant the implant placement site is exposed - the gum is cleared
+								away from the top of the implant. Dr. Wagner will then fasten (by cement or with internal threads) to the
+								implant the appropriate post that will be attached to the crown, bridge, or whatever type of replacement
+								is indicated. The implant is held in place by the bone, the post is fastened to the implant and provides
+								means to attach the crown (or bridge or whatever is the final replacement needed) to the implant.
+
+								Who Is A Candidate?
+
+								Anyone who is missing one or more of their teeth due to injury, disease or decay, may be a candidate for
+								dental implants. If one or a few teeth are missing, dental implants in conjunction with a crown or bridge
+								can replace those teeth without loosing more bone. If all or most of your teeth are missing, the dental
+								implants may be placed to replace a loose fitting full or partial denture. Adequate bone in your jaw is
+								needed to support the implant(s) along with healthy gum tissues that are free of periodontal disease.
+								Occasionally, older patients express concern that their age may prevent them from enjoying the benefits
+								that dental implants offer. However, health is more of a determining factor than age. If you're healthy
+								enough to have a tooth extracted, you're probably healthy enough to receive dental implants. Certain
+								chronic diseases may contraindicate implant treatment. Dr. Wagner will determine if you are a candidate
+								for dental implants after a careful evaluation of your dental and medical health.
+								</div>	
+				                <div class="tab-pane" id="dentbridge">If you leave a missing tooth un-replaced, this may cause your
+								surrounding teeth to drift out of position. A bridge is used to
+								replace one or more missing teeth. A bridge not only makes your
+								smile look better, but also prevents your teeth from continuing
+								to drift and restores them to proper function.
+
+								Bridges are cemented in and are unable to be removed by the
+								patient. A bridge is maintained the same way as natural teeth -
+								regular flossing, brushing, and visiting your dentist.
+
+								If you are considering a bridge in the Tulsa, Oklahoma area call
+								us at (918) 622-3915 to schedule an appointment or fill out our
+								online form. We look forward to hearing from you and giving you
+								the perfect smile you have always wanted.
+								</div>
+				                <div class="tab-pane" id="gumdisease">Each tooth has a natural pocket between the tooth and the gum.  In a healthy state, the depth of
+								each pocket is 1-3 millimeters in depth.  There are four stages in gum disease:  Gingivitis, Early
+								Perodontitis, Moderate Periodontitis and Advanced Periodontitis.  When gingivitis occurs, the depth
+								of the pocket increases to 4 millimeters due to the inflammation of the gum tissue.  Early
+								Periodontitis forms a 5 millimeter pocket due to the deterioration of bone around the tooth.  
+								Moderate Periodontitis creates a 6 millimeter pocket with moderate bone loss and recession of gum
+								tissue.  The disease continues to advance to Advanced Periodontitis creating a 7 millimeter pocket
+								and greater due to severe bone and gum tissue loss.  
+
+								At this stage, there is usually severe mobility of the teeth with little therapeutic therapy that will save the
+								teeth.  Bone and gum tissue can not be restored, therefore early detection and treatment is imperative in
+								order to STOP the gum disease process before it is too late.
+
+								Click HERE for a video on understanding Gum Disease
+
+								Signs of Periodontal disease
+
+								If you notice any of the following signs, please call and make an appointment with our office as soon as
+								possible:
+
+								Gums that bleed when you brush your teeth
+								Red, swollen, puffy or tender gums,
+								Gums that have pulled away from the teeth
+								Bad breath, that just does not want to go away
+								Exudate or pus that is between your teeth a loose or several loose teeth
+								A change in the way your teeth come together when you close your mouth.  
+								Any change in the way your partial dentures fit
+
+								Why can't you just clean my teeth?
+
+								  Periodontal disease is a serious infection. Evidence now links gum disease to a
+								   variety of health concerns, including heart disease, stroke, diabetes, and other
+								    degenerative diseases that are life threatening. It's not just about your teeth anymore!
+
+								Periodontal disease can be a disfiguring disease. Your gums swell in size and
+								    become red and angry looking. They may bleed very readily. Your teeth may
+								     shift and dark spaces between your teeth may start showing. The teeth then become loose and
+								may need to be removed.
+
+								         Early detection as with other diseases is the key to successful treatment. Dr Wagner or the
+								hygienist will routinely perform a gum (periodontal) disease
+								   screening exam. This is recommended at least once a year by the American
+								  Dental Association. The results of this examination will determine your periodontal status. If you
+								have periodontal disease, your treatment will be
+								      personalized for you and your level of infection. A routine cleaning is not enough by itself to
+								treat periodontal disease.
+
+								  What is Root Planing?
+
+								    Normal tooth cleanings remove plaque and calculus deposits from above the gum line. When
+								these deposits extend below the gum line, root planing is necessary.
+
+								                       Root planing is performed with the same tools as normal cleanings, but the
+								procedure is more aggressive. Often it is necessary to numb the affected area
+								before the procedure. Once the accumulated plaque and calculus have been removed, the gums will heal,
+								tightening around the teeth.
+
+								Depending upon the extent of disease found in the examination, root planing
+								may be done over several office visits. In this way, your dentist can assess  
+								the progress of treatment, and alter tactics if necessary.
+
+								Simply stated, root planing may be considered as an extension of a "routine
+								cleaning". A "routine cleaning" is intended to clean harden deposits that form
+								above the gums. Over time, these deposits often form below the gums, on the
+								roots. It is at this point that we recommend a more therapeutic procedure, called root planing.
+
+								What does it accomplish?
+
+								During this procedure the root surfaces are literally planed. This accomplishes several things:
+
+								1) removes hard deposits and the bacteria they harbor
+
+								2) creates a smooth root surface that is easier to keep clean
+
+								3) reduces infection because the bacteria will not reattach to the smooth surface as readily
+
+								It is unrealistic to consider your therapy as a quick fix.  Each person will respond differently to
+								treatment. Future treatment recommendations will be made on the basis of your healing. For
+								healing to be maximized it is imperative that you participate in your home care everyday.
+								</div>	                    				                    
+				            </div>
+				        </div>
+				            <!-- /tabs -->		   
+					</div>
+		</div>
+
+		<script>
+			$(document).ready(function(){
+  				$('[data-toggle="popover"]').popover();   
+			});
+		</script>
+
+
+		<footer>
+			<div class="container-fluid col-md-10" id="numberaddy"> <b>
+				<p>info@scottwagnerdds.com</p>
+				<br>
+				<p>9035 East 62nd Street</p>
+				<p>Tulsa, OK 74133</p>
+				<br>
+				<p>(918)-622-3915</p> </b>
+			</div>
+		</footer>
+
+	</body>
+
+	<script>
+		$(document).ready(function() {
+			$(window).resize(function() {
+				if($(window).width() >= 575) {
+					$("#dropguide").slideUp("slow");
+				}
+			}).resize();
+		});
+	</script>
+
+	<script type="text/javascript">
+		function initialCon() {
+			var ok = document.getElementById("dropguide");
+			ok.style.display = "none";
+		}
+
+		initialCon();
+	</script>
+
+	<script>
+		var degreeAnm = 0;
+		$(document).ready(function(){
+			$("#dropper").click(function(){
+				var but = $("#burger");
+				degreeAnm = degreeAnm + 90;
+				but.animate(
+					{deg: degreeAnm},
+					{duration: 200,
+						step: function(now) { 
+							$(this).css({transform: 'rotate(' + now + 'deg)'});
+	                    }
+					}
+				);
+				$("#dropguide").slideToggle("slow");
+			});
+		});
+	</script>
+
+	<script>
+		window.onscroll = function() {myFunction()};
+
+		var header = document.getElementById("topnaver");
+		var sticky = header.offsetTop;
+		var filla =document.getElementById("jumpcorrector");
+
+		function myFunction() {
+		  if (window.pageYOffset > sticky) {
+		    header.classList.add("sticky");
+		    filla.style.display = "block";
+		  } else {
+		    header.classList.remove("sticky");
+		    filla.style.display = "none";
+		  }
+		}
+
+		var currentTab = 0;
+		showTab(currentTab);
+
+		function showTab(n) {
+			var i, x = document.getElementsByClassName("tabcontent");
+			for (i = 0;  i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			x[n].style.display = "block";
+		}
+
+		function openCity(evt, cityName) {
+		  // Declare all variables
+		  var i, tabcontent, tablinks;
+
+		  // Get all elements with class="tabcontent" and hide them
+		  tabcontent = document.getElementsByClassName("tab-pane");
+		  for (i = 0; i < tabcontent.length; i++) {
+		    tabcontent[i].style.display = "none";
+		  }
+
+		  // Get all elements with class="tablinks" and remove the class "active"
+		  tablinks = document.getElementsByClassName("tabber");
+		  for (i = 0; i < tablinks.length; i++) {
+		    tablinks[i].className = tablinks[i].className.replace(" active", "");
+		  }
+
+		  // Show the current tab, and add an "active" class to the button that opened the tab
+		  document.getElementById(cityName).style.display = "block";
+		  evt.currentTarget.className += " active";
+
+		}
+
+		function checkMe() {
+			var x = document.getElementsByClassName("tabcontent");
+			if (x[2].style.display == "block" || x[1].style.display == "block") {
+				x[2].style.display = "none";
+				x[1].style.display = "none";
+				x[0].style.display = "block";
+			}
+		}
+
+	</script>
+
+
+	<script>
+		var findex = 0;
+		showFin(findex);
+
+		function showFin(n) {
+			var i, options = document.getElementsByClassName("fintabcontent");
+			var tabs = document.getElementsByClassName("fintablinks");
+			for (i = 0; i < options.length; ++i) {
+				options[i].style.display = "none"
+			}
+			for (i = 0; i < tabs.length; i++) {
+		      tabs[i].className = tabs[i].className.replace(" active", "");
+		  	}
+			options[n].style.display = "block";
+			tabs[n].className += " active";
+		}
+
+	</script>
+
+	<script>
+		function screenCheck() {
+			var menu = document.getElementById("dropguide");
+			if (screen.width >= 575) {
+				menu.style.display = none;
+			}
+			screenCheck()
+		}
+	</script>
